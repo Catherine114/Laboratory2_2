@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: none;
+	background-image: url(fon.jpg);
+	background-size: cover;
+}
+
+h1:first-letter {
+	color: #2c2f37;
+	background-color: rgba(255, 216, 0);
+	font-style: italic;
+}
+.title h1:after {
+	content: "";
+	position: absolute;
+}
+
+h1{
+	margin: 15px;
+    font-weight: 100;
+    color: #00caa6;
+    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 500%;
+    text-shadow: 2px 5px 0 rgba(255, 255, 153, 0.7);
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+h5{
+	margin: 1%;
+    color: #00caa6;
+    font-size: 22px;
+    font-weight: 100;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+}
+
+aside {
+    width: 20%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #FFFF66;
+    font-style: italic;
+}
+
+aside > p {
+    margin: .5rem;
+}
+
+p {
+    font-family: 'Inconsolata', monospace;
+    color: #ffd800;
+}
+
+aside > hr{
+	color: #00caa6;
+}
+
+aside > i{
+	color: grey;
+	cursor: pointer;
+}
