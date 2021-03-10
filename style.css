@@ -9,15 +9,15 @@ body{
 	background-size: cover;
 }
 
-h1{
+.title{
 	font-family: 'Permanent Marker', cursive;
 	font-size: 900%;
 	color: #ffd800;
 	margin: 1%;
-	margin-top: 13%;
+	margin-top: 4%;
 }
 
-a {
+.a {
     position: relative;
     text-decoration: none;
     color: #ffd800;
@@ -26,7 +26,7 @@ a {
 	font-family: 'Jura', sans-serif;
     font-size: 300%;
 }
-a::before, a::after {
+.a::before, .a::after {
     content: '';
     position: absolute;
     transition: transform .5s ease;
@@ -38,16 +38,16 @@ a::before, a::after {
     border-color: #ffd800;
     box-sizing: border-box;
 }
-a::before {
+.a::before {
     border-width: 2px 0 2px 0;
     transform: scaleX(0);
 }
-a::after {
+.a::after {
     border-width: 0 2px 0 2px;
     transform: scaleY(0);
 }
-a:hover::before,
-a:hover::after {
+.a:hover::before,
+.a:hover::after {
     transform: scale(1, 1);
 }
 
@@ -56,4 +56,98 @@ a:hover::after {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    transition: opacity 400ms ease-in;
+    display: none;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 204);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #ffd800; }
+
+.openModal {
+	position: relative;
+    text-decoration: none;
+    color: #ffd800;
+    display: inline-block;
+    font-family: 'Inconsolata', monospace;
+	font-family: 'Jura', sans-serif;
+    font-size: 300%;
+    margin: 2%;
+    margin-left: 85%;
+    background-color: rgba(255, 255, 204, 0.5);
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button  {
+    background-color: #ffd800;;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
 }

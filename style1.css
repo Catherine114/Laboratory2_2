@@ -66,3 +66,14 @@ aside > i{
 	color: grey;
 	cursor: pointer;
 }
+
+.footer{
+	margin: 15px;
+    color: #00caa6;
+    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 100%;
+}
+footer > hr {
+	color: #ffd800;
+}
