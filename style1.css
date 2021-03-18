@@ -7,11 +7,36 @@ body{
 	background-image: none;
 	background-image: url(fon.jpg);
 	background-size: cover;
+    background-color: grey;
+}
+
+html, body{
+    height: 100%;
+}
+
+.content{
+    min-height: 100%;
+    display: grid;
+    grid-template-areas: "hd" 
+                        "main"
+                        "as" 
+                        "ft";
+    grid-template-columns: repeat(9, 12%);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "hd hd hd hd hd hd hd hd hd"
+      "main main main main main main as as as"
+      "ft ft ft ft ft ft ft ft ft";
+    /*grid-template: minmax(10px, auto) 1fr minmax(100px, auto) / 1fr;*/
+}
+
+.as{
+    grid-area: as;
 }
 
 h1:first-letter {
 	color: #2c2f37;
-	background-color: rgba(255, 216, 0);
+	background-color: #FFCC33;
 	font-style: italic;
 }
 .title h1:after {
@@ -20,7 +45,7 @@ h1:first-letter {
 }
 
 h1{
-	margin: 15px;
+	margin: 10px;
     font-weight: 100;
     color: #00caa6;
     font-style: italic;
@@ -28,7 +53,7 @@ h1{
     font-size: 500%;
     text-shadow: 2px 5px 0 rgba(255, 255, 153, 0.7);
     margin-left: 15%;
-    margin-top: 5%;
+    margin-top: 1%;
 }
 
 h5{
@@ -41,21 +66,23 @@ h5{
 }
 
 aside {
-    width: 20%;
+    width: 50%;
     padding-left: .5rem;
     margin-left: .5rem;
     float: right;
-    box-shadow: inset 5px 0 5px -5px #FFFF66;
+    box-shadow: inset 10px 0 5px -5px  #FFCC33;
     font-style: italic;
 }
 
 aside > p {
     margin: .5rem;
+    color: white;
 }
 
 p {
     font-family: 'Inconsolata', monospace;
     color: #ffd800;
+    display: none;
 }
 
 aside > hr{
@@ -63,17 +90,64 @@ aside > hr{
 }
 
 aside > i{
-	color: grey;
+	color: #FFCC33;
 	cursor: pointer;
 }
 
+aside > .i2 {
+    color: #FFCC33;
+    cursor: pointer;
+}
+
+aside > .p2 {
+    margin: .5rem;
+}
+
 .footer{
-	margin: 15px;
     color: #00caa6;
     font-style: italic;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2%;
+    display: grid;
+    grid-area: ft;
 }
-footer > hr {
-	color: #ffd800;
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 110px);
+    grid-gap: 10px;
+    grid-auto-flow: row;
+    justify-content: start;
+    align-content: center;
+    margin: 1%;
+}
+
+.el {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.element6 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+}
+
+main > hr {
+    color: yellow;
+}
+
+.main{
+    display: grid;
+    grid-area: main;
+}
+
+.header{
+    display: grid;
+    grid-area: hd;
+}
+
+.color{
+    color:  #FFCC33;
 }
